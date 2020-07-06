@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">eTour</string>
+    <string name="user_name">TextView</string>
+    <string name="Register_Button">Button</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="login_password">*******</string>
+    <string name="email_address">email address</string>
+    <string name="account_password">account password</string>
+    <string name="homebutton">homeButton</string>
+    <string name="profile">profile</string>
+    <string name="search">search</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bookings">bookings</string>
+    <string name="home">HOME</string>
+    <string name="Search">SEARCH</string>
+    <string name="Bookings">BOOKINGS</string>
+    <string name="Profile">PROFILE</string>
+    <string name="login">Login</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="enter_your_email_address">Enter your email address</string>
+    <string name="Create_password">Create password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="minimum_password" />
+    <string name="auth_failed" />
+    <string name="tvTextView1">TextView</string>
+    <string name="second_name">Second Name</string>
+    <string name="first_name">First Name</string>
+    <string name="profileInfo">profileInfo</string>
+    <string name="sign_out">Sign out</string>
+    <string name="my_bookings">My bookings</string>
+    <string name="cancelled_bookings">Cancelled bookings</string>
+    <string name="safaris_com">Safaris.com</string>
+    <string name="textview">TextView</string>
+    <string name="rating">rating</string>
+    <string name="destinationLocation">location</string>
+    <string name="destinatin_name">destinatin name</string>
+    <string name="price">price</string>
+    <string name="destination_view">destination View</string>
+    <string name="available_safaris">Available Safaris</string>
+    <string name="safaris_name">safaris name</string>
+    <string name="package_description">package description</string>
+    <string name="safaris">safaris</string>
+    <string name="get_in_touch_with_your_tour_travel_service_providers">get in touch with your tour/travel service providers.</string>
+    <string name="search_button">searchButton</string>
+    <string name="home_button" />
+</resources>

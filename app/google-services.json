@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "594471717743",
+    "firebase_url": "https://e-tour-safaris.firebaseio.com",
+    "project_id": "e-tour-safaris",
+    "storage_bucket": "e-tour-safaris.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594471717743:android:faab7b097213bb95ed769a",
+        "android_client_info": {
+          "package_name": "com.example.etour"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594471717743-plp3jlbunh1cs386ghh52l6sgch5rkaa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlH5Z5ywaI7y2UjdH6DPffT3nudk8CzVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594471717743-plp3jlbunh1cs386ghh52l6sgch5rkaa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
