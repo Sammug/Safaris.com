@@ -1,19 +1,17 @@
 package com.example.etour;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.os.Bundle;
-
-import java.util.ArrayList;
-
 public class AvailableSafaris extends AppCompatActivity {
     Fragment safarisFrag;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
-    public static ArrayList<SafarisClass> availableSafaris;
+    //public static ArrayList<SafarisClass> availableSafaris;
 
 
     @Override
@@ -21,12 +19,8 @@ public class AvailableSafaris extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_available_safaris);
 
-        availableSafaris = new ArrayList<>();
-        availableSafaris.add(new SafarisClass("Mombasa","Pwani ya kenya have got several resorts"));
-        availableSafaris.add(new SafarisClass("Kericho", "Kericho is in Rift Vallet region of kenya"));
-
         fragmentManager = getSupportFragmentManager();
-        safarisFrag = fragmentManager.findFragmentById(R.id.safarisList);
+        safarisFrag = fragmentManager.findFragmentById(R.id.safaris_Frag);
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.commit();
     }

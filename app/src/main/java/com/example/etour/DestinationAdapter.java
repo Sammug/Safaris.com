@@ -39,6 +39,7 @@ public class DestinationAdapter extends RecyclerView.Adapter<DestinationAdapter.
                 @Override
                 public void onClick(View v) {
 
+
                 }
             });
         }

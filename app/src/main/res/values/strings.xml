@@ -45,4 +45,17 @@
     <string name="get_in_touch_with_your_tour_travel_service_providers">get in touch with your tour/travel service providers.</string>
     <string name="search_button">searchButton</string>
     <string name="home_button" />
+    <string name="account">Account</string>
+    <string name="my_account_info">My account info</string>
+    <string name="log_in_instead">Log in instead</string>
+    <string name="forgot_my_password">Forgot my password</string>
+    <string name="sign_up_instead">SIGN UP INSTEAD</string>
+    <string name="account_login">Account Login</string>
+    <string name="account_sign_up">Account sign up</string>
+    <string name="forgot_your_password_don_t_worry_we_ll_send_an_email_with_reset_details">Forgot your password? Don\'t worry we\'ll send an email with reset details</string>
+    <string name="reset">RESET</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="reseticon">resetIcon</string>
+    <string name="account_email_address">account email address</string>
+    <string name="back">Back</string>
 </resources>

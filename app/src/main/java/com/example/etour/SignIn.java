@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +19,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SignIn extends AppCompatActivity {
+    TextView tv_resetPassword;
     EditText etEmail, etPassword;
     Button btnSignIn, btnSignUP;
     FirebaseAuth auth;
@@ -27,17 +29,25 @@ public class SignIn extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        auth = FirebaseAuth.getInstance();
         /*if (auth.getCurrentUser()!=null){
             startActivity(new Intent(SignIn.this, MainActivity.class));
             finish();
         }*/
         setContentView(R.layout.activity_sign_in);
+        tv_resetPassword = findViewById(R.id.tv_resetPassword);
         etEmail =   findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.et_Password);
         btnSignIn = findViewById(R.id.btnSignIn);
         btnSignUP = findViewById(R.id.btnSignUp);
         progressBar = findViewById(R.id.progressBar2);
+
+        //navigate to password reset screen
+        tv_resetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SignIn.this, PasswordResetActivity.class));
+            }
+        });
 
         auth = FirebaseAuth.getInstance();
 
@@ -85,6 +95,7 @@ public class SignIn extends AppCompatActivity {
                                 progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
                                     startActivity(new Intent(SignIn.this, MainActivity.class));
+                                    finish();
                                 }
                             }
 

@@ -1,15 +1,18 @@
 package com.example.etour;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 
 
 /**
@@ -17,6 +20,10 @@ import android.view.ViewGroup;
  */
 public class SafarisFrag extends Fragment {
     public View view;
+    private SafarisAdapterClass myAdapter;
+    FirebaseFirestore firebaseFirestore;
+    //private CollectionReference safarisRef;
+    Query query;
 
     public SafarisFrag() {
         // Required empty public constructor
@@ -34,10 +41,34 @@ public class SafarisFrag extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        setUpRecyclerView();
+    }
+
+    private void setUpRecyclerView() {
+        firebaseFirestore = FirebaseFirestore.getInstance();
+        query = firebaseFirestore.collection("SAFARIS")
+                .orderBy("name",Query.Direction.ASCENDING);
+        FirestoreRecyclerOptions<SafarisClass> options = new FirestoreRecyclerOptions.Builder<SafarisClass>()
+                .setQuery(query, SafarisClass.class)
+                .build();
         RecyclerView safarisView = view.findViewById(R.id.safarisList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this.getContext());
-        RecyclerView.Adapter myAdapter = new safarisAdapterClass(this.getActivity(),AvailableSafaris.availableSafaris);
+        myAdapter = new SafarisAdapterClass(options);
         safarisView.setLayoutManager(layoutManager);
         safarisView.setAdapter(myAdapter);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        myAdapter.startListening();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (myAdapter != null){
+            myAdapter.stopListening();
+        }
     }
 }

@@ -1,27 +1,29 @@
 package com.example.etour;
 
+import android.widget.ImageView;
+
 public class SafarisClass {
+    private ImageView safarisImage;
     private String safarisName;
     private String safarisDescription;
+
+    public SafarisClass(){}
 
     public SafarisClass(String safarisName, String safarisDescription) {
         this.safarisName = safarisName;
         this.safarisDescription = safarisDescription;
     }
 
-    public String getSafarisName() {
-        return safarisName;
+    public ImageView getSafarisImage() {
+        return safarisImage;
     }
 
-    public void setSafarisName(String safarisName) {
-        this.safarisName = safarisName;
+    public String getSafarisName() {
+        return safarisName;
     }
 
     public String getSafarisDescription() {
         return safarisDescription;
     }
 
-    public void setSafarisDescription(String safarisDescription) {
-        this.safarisDescription = safarisDescription;
-    }
 }

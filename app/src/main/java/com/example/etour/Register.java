@@ -18,6 +18,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Register extends AppCompatActivity {
     private TextView tv_Email;
@@ -32,10 +33,18 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         tv_Email = findViewById(R.id.tv_Email);
+        TextView tv_Login = findViewById(R.id.tv_Login);
         et_Password = findViewById(R.id.et_Password);
         et_confPassword = findViewById(R.id.et_confPassword);
         btnRegister = findViewById(R.id.btnRegister);
         progressBar = findViewById(R.id.progressBar);
+
+        tv_Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Register.this, SignIn.class));
+            }
+        });
 
         //get firebase authentication
         mAuth = FirebaseAuth.getInstance();
@@ -90,12 +99,27 @@ public class Register extends AppCompatActivity {
                                 progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
                                     Toast.makeText(getApplicationContext(), "user successfully added", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(Register.this, MainActivity.class));
+                                    startActivity(new Intent(Register.this, SignIn.class));
+                                    finish();
                                 }
 
                             }
                         });
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser firebaseUser = mAuth.getCurrentUser();
+        updateUI(firebaseUser);
+    }
+
+    private void updateUI(FirebaseUser firebaseUser) {
+        if (mAuth.getCurrentUser() !=null){
+            startActivity(new Intent(Register.this, MainActivity.class));
+            finish();
+        }
     }
 }

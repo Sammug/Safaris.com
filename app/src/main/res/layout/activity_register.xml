@@ -4,11 +4,23 @@
     android:id="@+id/register"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#e1f5fe"
     android:gravity="center"
     android:orientation="vertical"
-    tools:viewBindingIgnore="true"
-    android:background="#00bcd4"
-    tools:context=".Register">
+    tools:context=".Register"
+    tools:viewBindingIgnore="true">
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/adamina"
+        android:text="@string/account_sign_up"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_primary_variant"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,76 +30,93 @@
 
         <EditText
             android:id="@+id/et_FirstName"
-            android:layout_width="183dp"
-            android:layout_height="55dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="0dp"
-            android:background="@drawable/rounded_corner"
+            android:layout_weight="1"
+            android:background="#eceff1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="@string/first_name"
-            android:textAlignment="center"
+            android:fontFamily="@font/adamina"
+            android:hint="@string/first_name"
             android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:textAlignment="textStart"
             tools:ignore="LabelFor" />
 
         <EditText
             android:id="@+id/et_SecondName"
-            android:layout_width="wrap_content"
-            android:layout_height="55dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="20dp"
-            android:background="@drawable/rounded_corner"
+            android:layout_weight="1"
+            android:background="#eceff1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="@string/second_name"
-            android:textAlignment="textStart"
+            android:fontFamily="@font/adamina"
+            android:hint="@string/second_name"
             android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:textAlignment="textStart"
             tools:ignore="LabelFor" />
     </LinearLayout>
 
     <EditText
         android:id="@+id/tv_Email"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="40dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:autofillHints="example@gmail.com"
-        android:background="@drawable/rounded_corner"
+        android:background="#eceff1"
         android:drawableStart="@drawable/email"
         android:ems="10"
         android:hint="@string/enter_your_email_address"
         android:inputType="textEmailAddress"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:textAlignment="textStart"
         tools:ignore="LabelFor" />
 
 
     <EditText
         android:id="@+id/et_Password"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="40dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:autofillHints=""
-        android:background="@drawable/rounded_corner"
+        android:background="#eceff1"
         android:drawableStart="@drawable/lock"
         android:ems="10"
         android:hint="@string/Create_password"
         android:inputType="textPassword"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:textAlignment="textStart"
         tools:ignore="LabelFor" />
 
     <EditText
         android:id="@+id/et_confPassword"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="40dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:autofillHints=""
-        android:background="@drawable/rounded_corner"
+        android:background="#eceff1"
         android:ems="10"
         android:hint="@string/confirm_password"
         android:inputType="textPassword"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:textAlignment="textStart"
         tools:ignore="LabelFor" />
 
     <Button
@@ -97,9 +126,13 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="75dp"
         android:layout_marginEnd="20dp"
-        android:text="@string/Register_Button"
         android:background="@drawable/rounded_corner"
-        tools:text="SIGN UP" />
+        android:text="@string/sign_up"
+        android:textColor="#fafafa"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="SIGN UP"/>
+
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="30dp"
@@ -107,4 +140,18 @@
         android:layout_gravity="center|bottom"
         android:layout_marginBottom="20dp"
         android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_Login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:paddingStart="0dp"
+        android:paddingEnd="20dp"
+        android:text="@string/log_in_instead"
+        android:textAlignment="textEnd"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="18sp"
+        android:focusable="true" />
 </LinearLayout>

@@ -1,5 +1,6 @@
 package com.example.etour;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -29,22 +30,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         fragmentManager = getSupportFragmentManager();
-        fragmentDestination = fragmentManager.findFragmentById(R.id.destination_list);
+        fragmentDestination = fragmentManager.findFragmentById(R.id.destination_frag);
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.commit();
-
-        btnLogin = findViewById(R.id.btnLogin);
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (v.getId() == R.id.btnLogin) {
-                    startActivity(new Intent(MainActivity.this, SignIn.class));
-                } else {
-                    throw new IllegalStateException("Unexpected value: " + v.getId());
-                }
-
-            }
-        });
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigationBottom);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
@@ -76,11 +64,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         Fragment fragment;
-
         switch (menuItem.getItemId()){
-            case R.id.action_search:
-                fragment = new SearchFragment();
-                loadFragment(fragment);
+            case R.id.action_home:
+                startActivity(new Intent(MainActivity.this, MainActivity.class));
                 return  true;
             case R.id.action_bookings:
                 fragment = new BookingsFragment();

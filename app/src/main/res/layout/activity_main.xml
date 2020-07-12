@@ -51,23 +51,6 @@
                 android:text="@string/get_in_touch_with_your_tour_travel_service_providers"
                 android:textAlignment="center"
                 android:textColor="#fff" />
-
-            <Button
-                android:id="@+id/btnLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_gravity="end"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="5dp"
-                android:background="@color/design_default_color_primary_dark"
-                android:gravity="center|center_horizontal"
-                android:paddingStart="5dp"
-                android:paddingEnd="15dp"
-                android:text="@string/login"
-                android:textColor="#fff"
-                android:textStyle="bold"
-                android:visibility="visible" />
         </LinearLayout>
 
 
@@ -87,7 +70,7 @@
         android:layout_gravity="end|bottom"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
-        android:background="#00acc1"
+        android:background="#e1f5fe"
         android:contentDescription="@string/search_button"
         app:fabSize="mini"
         app:srcCompat="@drawable/search" />
@@ -98,7 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_alignParentBottom="true"
-        android:background="#00acc1"
+        android:background="#e1f5fe"
         app:menu="@menu/navigation_menu"
         app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

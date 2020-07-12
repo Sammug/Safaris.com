@@ -5,7 +5,7 @@
     android:id="@+id/bookingsFrag"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00bcd4"
+    android:background="#e1f5fe"
     tools:context=".BookingsFragment">
 
     <LinearLayout
@@ -20,30 +20,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/btnMyBookings"
-            style='style="?android:attr/buttonBarButtonStyle"'
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="70dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginBottom="2dp"
             android:layout_weight="1"
-            android:background="#00bcd4"
-            android:text="@string/my_bookings" />
+            android:fontFamily="@font/adamina"
+            android:text="@string/my_bookings"
+            android:textAlignment="center"
+            android:textColor="@color/design_default_color_primary_variant"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btnCancelled"
-            style='style="?android:attr/buttonBarButtonStyle"'
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="2dp"
             android:layout_weight="1"
-            android:background="#00bcd4"
-            android:text="@string/cancelled_bookings" />
+            android:fontFamily="@font/adamina"
+            android:text="@string/cancelled_bookings"
+            android:textAlignment="center"
+            android:textColor="@color/design_default_color_primary_variant"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView

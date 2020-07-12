@@ -4,11 +4,22 @@
     android:id="@+id/sign_in"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#e1f5fe"
     android:gravity="center"
     android:orientation="vertical"
-    tools:viewBindingIgnore="true"
-    android:background="#00bcd4"
-    tools:context=".SignIn">
+    tools:context=".SignIn"
+    tools:viewBindingIgnore="true">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/account_login"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_primary_variant"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/etEmail"
@@ -17,12 +28,13 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="200dp"
         android:layout_marginEnd="20dp"
-        android:background="@drawable/rounded_corner"
+        android:background="#eceff1"
         android:drawableStart="@drawable/email"
         android:ems="10"
         android:hint="@string/email_address"
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
+        android:textAlignment="textStart"
         tools:ignore="LabelFor" />
 
     <EditText
@@ -33,7 +45,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:autofillHints="@string/login_password"
-        android:background="@drawable/rounded_corner"
+        android:background="#eceff1"
         android:drawableStart="@drawable/lock"
         android:ems="10"
         android:hint="@string/account_password"
@@ -43,8 +55,23 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_resetPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:clickable="true"
+            android:paddingStart="0dp"
+            android:paddingEnd="20dp"
+            android:text="@string/forgot_my_password"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:focusable="true" />
 
         <Button
             android:id="@+id/btnSignIn"
@@ -52,35 +79,38 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
             android:layout_weight="0"
             android:background="@drawable/rounded_corner"
-            android:text="@string/sign_in" />
+            android:text="@string/sign_in"
+            android:textColor="#fafafa"
+            android:textSize="18sp"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center|bottom"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone" />
 
         <Button
             android:id="@+id/btnSignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
             android:layout_weight="0"
             android:background="@drawable/rounded_corner"
             android:clickable="true"
             android:focusable="true"
-            android:text="@string/sign_up" />
+            android:text="@string/sign_up_instead"
+            android:textColor="#fafafa"
+            android:textSize="18sp" />
 
     </LinearLayout>
-
-    <ProgressBar
-        android:id="@+id/progressBar2"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_gravity="center|bottom"
-        android:layout_marginBottom="20dp"
-        android:visibility="gone" />
-
 
 </LinearLayout>

@@ -4,6 +4,6 @@
     android:id="@+id/searchFrag"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#e1f5fe"
     android:orientation="vertical"
-    android:background="#00bcd4"
-    tools:context=".SearchFragment"/>
+    tools:context=".SearchFragment" />
