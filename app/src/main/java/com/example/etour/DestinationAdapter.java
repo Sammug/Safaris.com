@@ -53,7 +53,16 @@ public class DestinationAdapter extends RecyclerView.Adapter<DestinationAdapter.
         holder.tvRating.setText(listOfAvailableDestinations.get(position).getDestinationRating());
         holder.tvDestinationPrice.setText(listOfAvailableDestinations.get(position).getDestinationPrice());
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(),AvailableSafarisActivity.class);
+                view.getContext().startActivity(intent);
+            }
+        });
+
     }
+
 
     @Override
     public int getItemCount() {
