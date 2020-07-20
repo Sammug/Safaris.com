@@ -1,11 +1,8 @@
 package com.example.etour;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +15,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
-    Button btnLogin;
     Fragment fragmentDestination;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
@@ -41,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, AvailableSafaris.class));
+                startActivity(new Intent(MainActivity.this, AvailableSafarisActivity.class));
             }
         });
         myRecyclerView = findViewById(R.id.destination_list);
@@ -89,4 +85,5 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                     .commit();
         }
     }
+
 }

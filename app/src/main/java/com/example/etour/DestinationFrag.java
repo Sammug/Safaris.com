@@ -1,22 +1,23 @@
 package com.example.etour;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DestinationFrag extends Fragment {
+public class DestinationFrag extends Fragment{
     private View view;
+    DestinationAdapter myAdapter;
+    RecyclerView destinationsList;
 
     public DestinationFrag() {
         // Required empty public constructor
@@ -34,12 +35,16 @@ public class DestinationFrag extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        RecyclerView destinationsList = view.findViewById(R.id.destination_list);
+        destinationsList = view.findViewById(R.id.destination_list);
+        setAdapter();
+    }
+
+    private void setAdapter() {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this.getContext());
         destinationsList.setLayoutManager(layoutManager);
         destinationsList.setHasFixedSize(true);
-        RecyclerView.Adapter adapter = new DestinationAdapter(this.getActivity(),DestinationDescriptionClass.listOfAvailableDestinations);
-        destinationsList.setAdapter(adapter);
-
+        myAdapter = new DestinationAdapter(this.getActivity(),DestinationDescriptionClass.listOfAvailableDestinations);
+        destinationsList.setAdapter(myAdapter);
     }
+
 }

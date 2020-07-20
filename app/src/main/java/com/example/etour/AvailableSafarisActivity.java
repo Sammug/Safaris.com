@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-public class AvailableSafaris extends AppCompatActivity {
+public class AvailableSafarisActivity extends AppCompatActivity {
     Fragment safarisFrag;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;

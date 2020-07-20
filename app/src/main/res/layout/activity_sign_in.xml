@@ -7,7 +7,7 @@
     android:background="#e1f5fe"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".SignIn"
+    tools:context=".SignInActivity"
     tools:viewBindingIgnore="true">
 
     <TextView

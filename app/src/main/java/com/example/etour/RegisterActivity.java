@@ -20,7 +20,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class Register extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
     private TextView tv_Email;
     EditText et_confPassword, et_Password;
     Button btnRegister;
@@ -42,7 +42,7 @@ public class Register extends AppCompatActivity {
         tv_Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Register.this, SignIn.class));
+                startActivity(new Intent(RegisterActivity.this, SignInActivity.class));
             }
         });
 
@@ -93,13 +93,13 @@ public class Register extends AppCompatActivity {
                 progressBar.setVisibility(View.VISIBLE);
                 //et_confPassword.setError("wrong password confirmation");
                 mAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(Register.this, new OnCompleteListener<AuthResult>() {
+                        .addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
                                     Toast.makeText(getApplicationContext(), "user successfully added", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(Register.this, SignIn.class));
+                                    startActivity(new Intent(RegisterActivity.this, SignInActivity.class));
                                     finish();
                                 }
 
@@ -118,7 +118,7 @@ public class Register extends AppCompatActivity {
 
     private void updateUI(FirebaseUser firebaseUser) {
         if (mAuth.getCurrentUser() !=null){
-            startActivity(new Intent(Register.this, MainActivity.class));
+            startActivity(new Intent(RegisterActivity.this, MainActivity.class));
             finish();
         }
     }

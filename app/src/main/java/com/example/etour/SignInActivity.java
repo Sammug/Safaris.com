@@ -18,7 +18,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class SignIn extends AppCompatActivity {
+public class SignInActivity extends AppCompatActivity {
     TextView tv_resetPassword;
     EditText etEmail, etPassword;
     Button btnSignIn, btnSignUP;
@@ -30,7 +30,7 @@ public class SignIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         /*if (auth.getCurrentUser()!=null){
-            startActivity(new Intent(SignIn.this, MainActivity.class));
+            startActivity(new Intent(SignInActivity.this, MainActivity.class));
             finish();
         }*/
         setContentView(R.layout.activity_sign_in);
@@ -45,7 +45,7 @@ public class SignIn extends AppCompatActivity {
         tv_resetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SignIn.this, PasswordResetActivity.class));
+                startActivity(new Intent(SignInActivity.this, PasswordResetActivity.class));
             }
         });
 
@@ -55,7 +55,7 @@ public class SignIn extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (v.getId() == R.id.btnSignUp) {
-                    startActivity(new Intent(SignIn.this, Register.class));
+                    startActivity(new Intent(SignInActivity.this, RegisterActivity.class));
                 } else {
                     throw new IllegalStateException("Unexpected value: " + v.getId());
                 }
@@ -89,12 +89,12 @@ public class SignIn extends AppCompatActivity {
                 progressBar.setVisibility(View.VISIBLE);
 
                 auth.signInWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(SignIn.this, new OnCompleteListener<AuthResult>() {
+                        .addOnCompleteListener(SignInActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
-                                    startActivity(new Intent(SignIn.this, MainActivity.class));
+                                    startActivity(new Intent(SignInActivity.this, MainActivity.class));
                                     finish();
                                 }
                             }

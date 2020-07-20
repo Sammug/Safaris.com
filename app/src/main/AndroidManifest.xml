@@ -14,10 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".PasswordResetActivity" />
-        <activity android:name=".AvailableSafaris" />
+        <activity android:name=".AvailableSafarisActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".SignIn" />
-        <activity android:name=".Register">
+        <activity android:name=".SignInActivity" />
+        <activity android:name=".RegisterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

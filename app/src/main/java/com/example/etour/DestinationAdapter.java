@@ -1,6 +1,6 @@
 package com.example.etour;
 
-import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -16,32 +17,25 @@ public class DestinationAdapter extends RecyclerView.Adapter<DestinationAdapter.
 
     private ArrayList<AvailableDestinationsList> listOfAvailableDestinations;
 
-    DestinationAdapter(Context context, ArrayList<AvailableDestinationsList> destinationList){
-        listOfAvailableDestinations = destinationList;
 
+    public  DestinationAdapter(FragmentActivity activity, ArrayList<AvailableDestinationsList> destinationList){
+        listOfAvailableDestinations = destinationList;
     }
-    public static class ViewHolder extends RecyclerView.ViewHolder{
+    //
+    public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView destinationPicture;
         TextView tvDestinationName;
         TextView tvDestinationLocation;
         TextView tvRating;
         TextView tvDestinationPrice;
 
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull final View itemView) {
             super(itemView);
             destinationPicture = itemView.findViewById(R.id.destinationPicRepresentation);
             tvDestinationName = itemView.findViewById(R.id.destinationName);
             tvDestinationLocation = itemView.findViewById(R.id.destinationLocation);
             tvRating = itemView.findViewById(R.id.rating);
             tvDestinationPrice = itemView.findViewById(R.id.package_price);
-
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-
-                }
-            });
         }
     }
     @NonNull
@@ -58,10 +52,12 @@ public class DestinationAdapter extends RecyclerView.Adapter<DestinationAdapter.
         holder.tvDestinationLocation.setText(listOfAvailableDestinations.get(position).getDestinationLocation());
         holder.tvRating.setText(listOfAvailableDestinations.get(position).getDestinationRating());
         holder.tvDestinationPrice.setText(listOfAvailableDestinations.get(position).getDestinationPrice());
+
     }
 
     @Override
     public int getItemCount() {
         return listOfAvailableDestinations.size();
     }
+
 }
