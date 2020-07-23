@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, AvailableSafarisActivity.class));
+                startActivity(new Intent(MainActivity.this, SafarisViewActivity.class));
             }
         });
         myRecyclerView = findViewById(R.id.destination_list);

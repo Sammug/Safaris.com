@@ -58,4 +58,10 @@
     <string name="reseticon">resetIcon</string>
     <string name="account_email_address">account email address</string>
     <string name="back">Back</string>
+    <string name="reserve_booking">Reserve Booking</string>
+    <string name="location_picture">location picture</string>
+    <string name="mombasa">Mombasa</string>
+    <string name="credit_card_visa">Credit Card/Visa</string>
+    <string name="paypal">PayPal</string>
+    <string name="lipa_na_mpesa">Lipa na Mpesa</string>
 </resources>

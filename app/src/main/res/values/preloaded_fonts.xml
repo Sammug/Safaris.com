@@ -2,6 +2,7 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/adamina</item>
+        <item>@font/anonymous_pro</item>
         <item>@font/della_respira</item>
         <item>@font/eater</item>
         <item>@font/merienda</item>

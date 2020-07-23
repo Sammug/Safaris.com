@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e1f5fe"
+    tools:context=".SafarisViewActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="387dp"
+
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="335dp"
+            android:text="@string/mombasa"
+            app:layout_constraintBottom_toTopOf="@+id/btnReserveBookin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <Button
+        android:id="@+id/btnReserveBookin"
+        android:layout_width="191dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="187dp"
+        android:layout_marginTop="618dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="@font/adamina"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="@string/reserve_booking"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="389dp"
+            android:layout_height="157dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="53dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/beach"
+            android:contentDescription="@string/location_picture" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

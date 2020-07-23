@@ -1,5 +1,6 @@
 package com.example.etour;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,13 @@ public class SafarisAdapterClass extends FirestoreRecyclerAdapter<SafarisClass, 
     protected void onBindViewHolder(@NonNull ViewHolder viewHolder, int i, @NonNull SafarisClass safarisClass) {
         viewHolder.tvSafarisName.setText(safarisClass.getSafarisName());
         viewHolder.tvSafariDescription.setText(safarisClass.getSafarisDescription());
+        viewHolder.safariView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(),SafarisViewActivity.class);
+                view.getContext().startActivity(intent);
+            }
+        });
 
     }
 

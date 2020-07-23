@@ -5,14 +5,12 @@
     android:id="@+id/safaris_Frag"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00bcd4"
     tools:context=".SafarisFrag">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/safarisList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        />
+        android:layout_marginTop="10dp" />
 
 </LinearLayout>
