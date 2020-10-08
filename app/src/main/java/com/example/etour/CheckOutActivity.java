@@ -2,16 +2,17 @@ package com.example.etour;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.paypal.android.sdk.payments.PayPalService;
+
 public class CheckOutActivity extends AppCompatActivity {
     TextView tvVisa, tvPayPal, tvMpesa;
     FragmentManager manager;
-    FragmentTransaction transaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class CheckOutActivity extends AppCompatActivity {
         tvVisa = findViewById(R.id.tvVisa);
         tvPayPal = findViewById(R.id.tvPayPal);
         tvMpesa = findViewById(R.id.tvMpesa);
+
 
         tvVisa.setOnClickListener(new View.OnClickListener() {
             @Override

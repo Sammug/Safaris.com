@@ -64,4 +64,7 @@
     <string name="credit_card_visa">Credit Card/Visa</string>
     <string name="paypal">PayPal</string>
     <string name="lipa_na_mpesa">Lipa na Mpesa</string>
+    <string name="continue_to_paypal">Continue to PayPal</string>
+    <string name="paypalText">fghghjhkkjkjkjhjjgjjhjhjhjhjhjhhkhkh bbbbbbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmmmmmmmmmm hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</string>
+    <string name="continue_to_the_checkout_using_paypal">Continue to the checkout using PayPal</string>
 </resources>
