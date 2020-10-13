@@ -67,4 +67,7 @@
     <string name="continue_to_paypal">Continue to PayPal</string>
     <string name="paypalText">fghghjhkkjkjkjhjjgjjhjhjhjhjhjhhkhkh bbbbbbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmmmmmmmmmm hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</string>
     <string name="continue_to_the_checkout_using_paypal">Continue to the checkout using PayPal</string>
+    <string name="pay">PAY</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="pay_with_mpesa">Pay with Mpesa</string>
 </resources>

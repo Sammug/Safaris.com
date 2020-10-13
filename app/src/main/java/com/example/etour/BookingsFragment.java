@@ -25,6 +25,7 @@ public class BookingsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_bookings, container, false);
+        //ToolBar toolBar = view.findViewById(R.id.bookingsToolBar);
         return view;
     }
 }

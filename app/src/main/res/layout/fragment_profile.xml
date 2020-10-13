@@ -9,12 +9,29 @@
     android:orientation="vertical"
     tools:context=".ProfileFragment">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bookingsToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e1f5fe"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_back"
+            android:background="#e1f5fe"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/adamina"
         android:paddingStart="10dp"
         android:paddingEnd="0dp"
