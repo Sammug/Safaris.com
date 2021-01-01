@@ -43,7 +43,7 @@ public class PayPalFrag extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        btnPayPal = btnPayPal.findViewById(R.id.btnPayPal);
+        //btnPayPal = btnPayPal.findViewById(R.id.btnPayPal);
 
         //start paypal service
     }

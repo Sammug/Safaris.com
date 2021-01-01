@@ -2,12 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/profileFrag"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#e1f5fe"
     android:orientation="vertical"
-    tools:context=".ProfileFragment">
+    tools:context=".UserProfile">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/bookingsToolBar"
@@ -41,7 +40,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="177dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:orientation="vertical">
 
@@ -57,35 +56,51 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/ivProfilePhoto"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="90dp"
             android:contentDescription="@string/profileInfo"
             app:srcCompat="@drawable/profile" />
 
         <TextView
-            android:id="@+id/tvFname"
+            android:id="@+id/tvUserEmail"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:background="#eceff1"
-            android:text="" />
+            android:text=""
+            android:textAlignment="viewStart" />
 
         <TextView
-            android:id="@+id/tvProfileId"
+            android:id="@+id/tvUserFirstName"
             android:layout_width="match_parent"
             android:layout_height="34dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="5dp"
             android:background="#eceff1"
-            android:text="" />
+            android:text=""
+            android:textAlignment="viewStart" />
+
+        <TextView
+            android:id="@+id/tvUserSecondName"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="#eceff1"
+            android:text=""
+            android:textAlignment="viewStart"
+            android:textColor="@color/design_default_color_primary_variant"
+            android:textSize="12sp" />
+
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnLogOut"
+        android:id="@+id/btnSignOutUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -94,4 +109,5 @@
         android:background="@drawable/rounded_corner"
         android:text="@string/sign_out"
         android:textColor="#fafafa" />
+
 </LinearLayout>

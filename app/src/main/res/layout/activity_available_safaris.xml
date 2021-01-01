@@ -12,9 +12,8 @@
         android:layout_width="362dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="29dp"
-        android:layout_marginBottom="2dp"
         android:fontFamily="@font/adamina"
         android:text="@string/available_safaris"
         android:textAlignment="center"
@@ -27,11 +26,10 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="396dp"
-        android:layout_height="665dp"
+        android:layout_width="419dp"
+        android:layout_height="680dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="11dp"
-        android:layout_marginBottom="5dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,8 +39,8 @@
         <fragment
             android:id="@+id/fragmentSafaris"
             android:name="com.example.etour.SafarisFrag"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="693dp"
             tools:layout="@layout/fragment_safaris" />
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

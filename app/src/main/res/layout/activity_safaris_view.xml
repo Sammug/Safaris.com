@@ -6,59 +6,118 @@
     android:layout_height="match_parent"
     android:background="#e1f5fe"
     tools:context=".SafarisViewActivity">
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/destinationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/textView11"
-            android:layout_width="387dp"
+            android:id="@+id/tvNameOfDestination"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="335dp"
+            android:hint="@string/location"
+            android:textAlignment="center"
+            android:textColor="@color/design_default_color_primary_variant"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnReserveBookin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.517"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivSafarisPhoto"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="wrap_content"
 
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
-            android:layout_marginBottom="335dp"
-            android:text="@string/mombasa"
+            android:layout_marginBottom="280dp"
+            android:hint="@string/locdescription"
+            android:textAlignment="center"
+            android:textColor="@color/design_default_color_primary_variant"
+            android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/btnReserveBookin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+            app:layout_constraintTop_toBottomOf="@+id/ivSafarisPhoto" />
+
+        <TextView
+            android:id="@+id/tvRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="313dp"
+            android:layout_marginEnd="251dp"
+            android:layout_marginBottom="160dp"
+            android:text="@string/rating"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvPackagePrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivSafarisPhoto" />
+
+        <TextView
+            android:id="@+id/tvPackagePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="313dp"
+            android:layout_marginEnd="51dp"
+            android:layout_marginBottom="160dp"
+            android:text="@string/price"
+            android:textAlignment="center"
+            android:textColor="@color/design_default_color_primary_variant"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvRate"
+            app:layout_constraintTop_toBottomOf="@+id/ivSafarisPhoto"
+            app:layout_constraintVertical_bias="1.0" />
 
         <Button
-        android:id="@+id/btnReserveBookin"
-        android:layout_width="191dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="187dp"
-        android:layout_marginTop="618dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="70dp"
-        android:background="@drawable/rounded_corner"
-        android:fontFamily="@font/adamina"
-        android:paddingStart="5dp"
-        android:paddingEnd="5dp"
-        android:text="@string/reserve_booking"
-        android:textAlignment="center"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/btnReserveBookin"
+            android:layout_width="191dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="187dp"
+            android:layout_marginTop="618dp"
+            android:layout_marginEnd="33dp"
+            android:layout_marginBottom="70dp"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/adamina"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="@string/reserve_booking"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="389dp"
-            android:layout_height="157dp"
+            android:id="@+id/ivSafarisPhoto"
+            android:layout_width="416dp"
+            android:layout_height="230dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="53dp"
+            android:layout_marginTop="3dp"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView11"
+            android:contentDescription="@string/location_picture"
+            app:layout_constraintBottom_toTopOf="@+id/tvDescription"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/beach"
-            android:contentDescription="@string/location_picture" />
+            app:srcCompat="@drawable/beach" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

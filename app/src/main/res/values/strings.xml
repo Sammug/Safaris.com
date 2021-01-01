@@ -47,9 +47,9 @@
     <string name="home_button" />
     <string name="account">Account</string>
     <string name="my_account_info">My account info</string>
-    <string name="log_in_instead">Log in instead</string>
+    <string name="log_in_instead">Log in </string>
     <string name="forgot_my_password">Forgot my password</string>
-    <string name="sign_up_instead">SIGN UP INSTEAD</string>
+    <string name="sign_up_instead">SIGN UP</string>
     <string name="account_login">Account Login</string>
     <string name="account_sign_up">Account sign up</string>
     <string name="forgot_your_password_don_t_worry_we_ll_send_an_email_with_reset_details">Forgot your password? Don\'t worry we\'ll send an email with reset details</string>
@@ -70,4 +70,7 @@
     <string name="pay">PAY</string>
     <string name="enter_amount">Enter Amount</string>
     <string name="pay_with_mpesa">Pay with Mpesa</string>
+    <string name="searchDestination">Search</string>
+    <string name="location">location</string>
+    <string name="locdescription">locdescription</string>
 </resources>

@@ -13,35 +13,34 @@
         android:layout_width="383dp"
         android:layout_height="40dp"
         android:layout_marginStart="14dp"
-        android:layout_marginTop="164dp"
         android:layout_marginEnd="14dp"
-        android:layout_marginBottom="15dp"
         android:background="#eceff1"
-        android:drawableStart="@drawable/ic_visa_credit_card"
         android:fontFamily="@font/anonymous_pro"
         android:paddingStart="5dp"
         android:paddingEnd="0dp"
         android:text="@string/credit_card_visa"
         android:textAlignment="viewStart"
         android:textSize="12sp"
+        android:clickable="true"
 
         android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_visa_credit_card"
         app:layout_constraintBottom_toTopOf="@+id/tvPayPal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusable="true" />
 
     <TextView
         android:id="@+id/tvPayPal"
-        android:layout_width="381dp"
-        android:layout_height="40dp"
+        android:layout_width="382dp"
+        android:layout_height="34dp"
         android:layout_marginStart="14dp"
-        android:layout_marginTop="15dp"
         android:layout_marginEnd="14dp"
-        android:layout_marginBottom="15dp"
         android:background="#eceff1"
-        android:drawableStart="@drawable/ic_paypal"
+        android:clickable="true"
+        android:focusable="true"
         android:fontFamily="@font/anonymous_pro"
         android:paddingStart="5dp"
         android:paddingEnd="0dp"
@@ -49,6 +48,7 @@
         android:textAlignment="viewStart"
         android:textSize="12sp"
         android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_paypal"
         app:layout_constraintBottom_toTopOf="@+id/tvMpesa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -60,45 +60,36 @@
         android:layout_width="383dp"
         android:layout_height="40dp"
         android:layout_marginStart="14dp"
-        android:layout_marginTop="15dp"
         android:layout_marginEnd="14dp"
-        android:layout_marginBottom="388dp"
+        android:layout_marginBottom="600dp"
         android:background="#eceff1"
-        android:drawableStart="@drawable/ic_m_pesa_01"
+        android:clickable="true"
+        android:focusable="true"
         android:fontFamily="@font/anonymous_pro"
         android:text="@string/lipa_na_mpesa"
         android:textAlignment="viewStart"
         android:textSize="12sp"
         android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_m_pesa_01"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPayPal" />
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="413dp"
-        android:layout_height="378dp"
-        android:layout_marginTop="9dp"
+    <FrameLayout
+        android:id="@+id/fragment_holder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvMpesa">
 
-        <FrameLayout
-            android:id="@+id/fragment_holder"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="1dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvMpesa">
-
-        </FrameLayout>
-    </androidx.core.widget.NestedScrollView>
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

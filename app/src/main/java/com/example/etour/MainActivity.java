@@ -1,8 +1,12 @@
 package com.example.etour;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +15,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.location.places.PlaceDetectionClient;
+import com.google.android.gms.location.places.Places;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -29,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         fragmentDestination = fragmentManager.findFragmentById(R.id.destination_frag);
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.commit();
+        //
+
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigationBottom);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
@@ -37,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, SafarisViewActivity.class));
+                startActivity(new Intent(MainActivity.this, AvailableSafarisActivity.class));
             }
         });
         myRecyclerView = findViewById(R.id.destination_list);
@@ -65,12 +73,12 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 startActivity(new Intent(MainActivity.this, MainActivity.class));
                 return  true;
             case R.id.action_bookings:
-                fragment = new BookingsFragment();
-                loadFragment(fragment);
+                startActivity(new Intent(MainActivity.this, BookingStatusActivity.class));
                 return true;
             case  R.id.action_profile:
-                fragment = new ProfileFragment();
-                loadFragment(fragment);
+                //fragment = new ProfileFragment();
+                //loadFragment(fragment);
+                startActivity(new Intent(MainActivity.this, UserProfile.class));
                 return  true;
         }
         return false;
@@ -86,4 +94,24 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         }
     }
 
+    /**@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.navigation_menu, menu);
+        MenuItem searchDestination = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) searchDestination.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+
+                return false;
+            }
+        });
+        return true;
+    }**/
 }
