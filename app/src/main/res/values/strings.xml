@@ -73,4 +73,6 @@
     <string name="searchDestination">Search</string>
     <string name="location">location</string>
     <string name="locdescription">locdescription</string>
+    <string name="mpesa_no_e_g_0712345678">mpesa No e.g 0712345678</string>
+    <string name="amount">Amount</string>
 </resources>

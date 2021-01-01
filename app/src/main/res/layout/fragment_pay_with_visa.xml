@@ -5,7 +5,7 @@
     android:id="@+id/frag_visa"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#e1f5fe"
+    android:background="@drawable/bolder"
     tools:context=".PayWithVisaFrag">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,6 +21,7 @@
             android:layout_marginTop="10dp"
             android:hint="@string/first_name"
             android:inputType="textPersonName"
+            android:background="@drawable/bolder"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.466"
@@ -36,6 +37,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="20dp"
+            android:background="@drawable/bolder"
             app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -49,6 +51,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="20dp"
+            android:background="@drawable/bolder"
             app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,6 +65,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="308dp"
+            android:background="@drawable/bolder"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
